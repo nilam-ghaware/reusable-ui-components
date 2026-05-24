@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Reusable UI Components</h1>
+
+  <section>
+    <h2>Buttons</h2>
+
+    <div class="button-group">
+      <app-ui-button label="Primary Button" variant="primary" (buttonClick)="handleButtonClick($event)" />
+
+      <app-ui-button label="Secondary Button" variant="secondary" (buttonClick)="handleButtonClick($event)" />
+
+      <app-ui-button label="Disabled Button" [disabled]="true" />
+    </div>
+  </section>
+
+  <section>
+    <h2>Cards</h2>
+
+    <app-ui-card title="Demo Card" content="Reusable Angular component example"
+      (cardSelected)="handleCardSelection($event)"
+      [buttonClickedInfo]="clickedVariant ? clickedVariant + ' button has been clicked!' : ''" />
+  </section>
+</div>
